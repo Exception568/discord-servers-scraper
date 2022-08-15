@@ -1,3 +1,5 @@
+import requets
+import json
 r = requests.get('https://www.reddit.com/domain/discord.gg/new.json', headers={'User-Agent': 'servers scraper'})
 json_data = r.json()
 servers = {}
