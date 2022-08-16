@@ -5,5 +5,5 @@ json = r.json()
 servers = {}
 for url in json['data']['children']:
     servers[url['data']['url']] = {'link': url['data']['url']}
-with open('servers.json', 'w') as datafile:
+with open('servers.json', 'w') as serversf:
     json.dump(servers, datafile)
