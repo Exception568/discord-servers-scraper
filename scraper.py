@@ -1,9 +1,9 @@
 import requets
 import json
 r = requests.get('https://www.reddit.com/domain/discord.gg/new.json', headers={'User-Agent': 'servers scraper'})
-json_data = r.json()
+json = r.json()
 servers = {}
-for url in json_data['data']['children']:
+for url in json['data']['children']:
     servers[url['data']['url']] = {'link': url['data']['url']}
-with open('discord.json', 'w') as datafile:
+with open('servers.json', 'w') as datafile:
     json.dump(servers, datafile)
